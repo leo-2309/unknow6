@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Memória</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+    
+        <h1>Jogo de Memória do <i>Sonic</i></h1>
+
+    <div id="game-board"></div> <br>
+    <button id="reset-btn" onclick="resetGame()">Reiniciar Jogo</button>
+
+    <div id="victory-message" style="display: none;">Parabéns Lucca! Nota 10! <img src="images/luccachorao.jpg" alt="" width="125px" height="127px"></div>
+
+   
+
+    <div id="stars-container"></div>
+
+    <!-- Sons -->
+    <audio id="victory-sound" src="sounds/victory.mp3" preload="auto"></audio>
+    <audio id="error-sound" src="sounds/error.mp3" preload="auto"></audio>
+    <audio id="success-sound" src="sounds/sucess.mp3" preload="auto"></audio>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

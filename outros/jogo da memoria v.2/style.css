@@ -1,0 +1,283 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0092c2;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #0096FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 80%;
+    display: none;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0092c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #016688;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+.card img {
+    width: 67px; /* Ajuste o tamanho conforme necessário */
+    height: 98px;
+    display: none;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card:focus {
+    outline: none; /* Remove o contorno azul da carta inteira */
+}
+
+#victory-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Tamanho grande do texto */
+    font-weight: bold;
+    color: #ffffff; /* Cor vibrante do texto */
+    text-align: center;
+    padding: 20px; /* Espaço ao redor do texto */
+    background-color: #00bfff; /* Fundo preto semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    display: none; /* Oculto inicialmente */
+    animation: scaleUp 1s ease-out forwards; /* Animação para crescer */
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+::selection{
+    background-color: #0092c2bd;
+    color: white;
+}
+
+.card.flipped {
+    transform: rotateY(180deg); /* Faz o card virar */
+}
+
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para não interferir na interação do jogo */
+    overflow: hidden;
+    display: none;
+}
+
+.star {
+    position: absolute;
+    color: yellow;
+    font-size: 20px;
+    animation: fall 4s ease-out forwards, fade 1s ease-out forwards;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+img{
+    border-radius: 3px;
+}
+
+
+
+
+.card {
+    outline: none; /* Remove o contorno azul */
+}
+.card:focus {
+    outline: none; /* Remove também ao focar via teclado */
+}
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #182468;
+    margin-bottom: 20px;
+}
+
+/* Configuração da grade de cards */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Ajustável para telas pequenas e grandes */
+    gap: 10px;
+    max-width: 400px; /* Define uma largura máxima para centralizar */
+    margin: 0 auto;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 2px solid #182468;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+    display: none;
+    object-fit: contain;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #182468;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #182468;
+}
+
+#victory-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fffb00;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 10px;
+    display: none;
+    animation: scaleUp 1s ease-out forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
